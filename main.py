@@ -31,7 +31,7 @@ def print_report(book_path):
 
     dict_c = count_characteres(text)
     lst_c = list(dict_c.items())
-    lst_c.sort(reverse=True, key=sort_on_count)
+    lst_c.sort(reverse=True, key=sort_by_count)
 
     for character, count_c in lst_c:
         if(character.isalpha()):
@@ -39,7 +39,7 @@ def print_report(book_path):
 
     print("--- End report ---")
 
-def sort_on_count(tuple):
+def sort_by_count(tuple):
     return tuple[1]
 
 main()
